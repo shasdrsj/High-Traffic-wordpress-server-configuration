@@ -82,7 +82,7 @@ sudo systemctl restart php7.3-fpm.service
 sudo mysql_secure_installation
 PASS=`pwgen -s 14 1`
 
-sudo mysql -uroot <<MYSQL_SCRIPT
+sudo mysql -u root <<MYSQL_SCRIPT
 CREATE DATABASE $USERNAME;
 CREATE USER '$USERNAME'@'localhost' IDENTIFIED BY '$PASS';
 GRANT ALL PRIVILEGES ON $USERNAME.* TO '$USERNAME'@'localhost';
